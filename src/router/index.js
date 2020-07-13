@@ -1,32 +1,29 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import LoginServer from "../views/LoginServer.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home
+    name: "LoginServer",
+    component: LoginServer
+  },
+  {
+    path: "/open",
+    name: "OpenServer",
+    component: () => import("../views/OpenServer.vue")
   },
   {
     path: "/options",
     name: "Options",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Options.vue")
+    component: () => import("../views/Options.vue")
   },
   {
     path: "/about",
     name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    component: () => import("../views/About.vue")
   }
 ];
 

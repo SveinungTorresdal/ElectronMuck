@@ -3,26 +3,26 @@
     <nav class="px-2 pb-2 text-left">
       <b-button-group>
         <b-button
-          variant="outline-secondary"
+          variant="light"
           class="topbar-btn"
-          :to="{ name: 'Home' }"
-          exact-active-class="bg-secondary text-white"
+          :to="{ name: 'LoginServer' }"
+          exact-active-class="bg-primary text-white"
         >
-          <font-awesome-icon icon="plus" />
+          <font-awesome-icon icon="link" />
         </b-button>
         <b-button
-          variant="outline-secondary"
+          variant="light"
           class="topbar-btn"
           :to="{ name: 'Options' }"
-          exact-active-class="bg-secondary text-white"
+          exact-active-class="bg-primary text-white"
         >
           <font-awesome-icon icon="cog" />
         </b-button>
         <b-button
-          variant="outline-secondary"
+          variant="light"
           class="topbar-btn"
           :to="{ name: 'About' }"
-          exact-active-class="bg-secondary text-white"
+          exact-active-class="bg-primary text-white"
         >
           <font-awesome-icon icon="info" />
         </b-button>
@@ -31,21 +31,21 @@
     <nav class="px-2 pb-2 text-right">
       <b-button-group>
         <b-button
-          variant="outline-secondary"
+          variant="light"
           class="topbar-btn"
           @click.prevent="minimizeProgram"
         >
           <font-awesome-icon icon="window-minimize" />
         </b-button>
         <b-button
-          variant="outline-secondary"
+          variant="light"
           class="topbar-btn"
           @click.prevent="fullscreenProgram"
         >
           <font-awesome-icon icon="window-restore" />
         </b-button>
         <b-button
-          variant="outline-secondary"
+          variant="danger"
           class="topbar-btn"
           @click.prevent="closeProgram"
         >
