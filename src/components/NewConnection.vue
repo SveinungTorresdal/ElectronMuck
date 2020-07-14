@@ -27,7 +27,9 @@
     </div>
 
     <div class="text-center">
-      <b-button variant="primary" type="submit">Connect</b-button>
+      <b-button variant="primary" type="submit">
+        Connect
+      </b-button>
     </div>
   </b-form>
 </template>
@@ -65,42 +67,18 @@ export default {
     }
   },
   methods: {
-    async onSubmit() {
+    onSubmit() {
       if (!this.validAddress || !this.validPort) {
         return;
       }
-      let connection = new window.Telnet();
 
-      // these parameters are just examples and most probably won't work for your use-case.
-      let params = {
-        host: this.server.address,
-        port: parseInt(this.server.port),
-        negotiationMandatory: false,
-        timeout: 3000,
-        debug: true,
-        username: "",
-        password: ""
-      };
-
-      try {
-        await connection.connect(params);
-        console.log("Success", connection);
-
-        connection.end().then(connection.destroy());
-      } catch (error) {
-        // handle the throw (timeout)
-        console.error(error, connection);
-      }
-
-      /*
       this.$router.push({
         name: "OpenServer",
         params: {
-          server: this.server.address,
+          host: this.server.address,
           port: this.server.port
         }
       });
-      */
     }
   }
 };

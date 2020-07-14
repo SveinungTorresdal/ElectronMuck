@@ -56,6 +56,14 @@
   </header>
 </template>
 <style scoped>
+header {
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+}
+header * {
+  -webkit-user-select: auto;
+  -webkit-app-region: no-drag;
+}
 .topbar-btn {
   border-top-left-radius: 0 !important;
   border-top-right-radius: 0 !important;
